@@ -43,9 +43,9 @@ export const SocialMdIcn = ()=>{
   }
 export const Sidebar = () => {
   return (
-    <div className="md:flex flex-col justify-between h-[100vh] bg-black px-12 text-xl font-semibold fixed z-10 items-center w-[20vw] hidden">
-      <div className="md:flex items-center flex-col py-3 hidden">
-        <img src="logo.png" alt="Logo" className="w-[6rem] rounded-full" />
+    <div className="md:flex flex-col justify-between h-[100vh] bg-black px-12 text-xl font-semibold fixed z-10 items-center md:h-[115vh] lg:h-[100vh] lg:w-[20vw] hidden ">
+      <div className="md:flex items-center flex-col lg:py-3 hidden">
+        <img src="logo.png" alt="Logo" className="lg:w-[6rem] md:w-[4rem] rounded-full" />
         <h2>Solange~D~Ihirwe</h2>
       </div>
        <NavBar />

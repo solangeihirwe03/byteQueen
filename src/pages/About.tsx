@@ -3,16 +3,16 @@ import { Sidebar } from "../components/Sidebar"
 export const About = () => {
     return (
         <div className="w-full flex">
-            <div className="md:pr-52">
+            <div className="md:hidden lg:pr-52">
             <Sidebar />
             </div>
-            <div className="bg-[#212529] flex items-center flex-col relative font-poppins w-full  text-white md:h-[100vh] justify-center ">
+            <div className="bg-[#212529] flex items-center flex-col relative font-poppins w-full  text-white lg:h-[100vh] justify-center md:pl-56">
                 <div className="relative mb-5 py-7">
                     <h1 className="font-bold text-7xl text-[#353535]">ABOUT ME</h1>
                     <h3 className="left-16 absolute top-12 text-4xl">Know Me More</h3>
                 </div>
-                <div className="flex justify-between py-12 md:gap-16 md:w-[80%] md:pl-4 flex-col px-4">
-                    <div className="md:w-[55%] flex flex-col text-[15px]">
+                <div className="flex justify-between md:py-12 md:gap-16 md:w-[80%] lg:pl-4 flex-col lg:flex-row px-4 w-full">
+                    <div className="lg:w-[55%] flex flex-col text-[15px] lg:text-lg">
                         <h2 className=" md:text-4xl text-xl font-semibold">
                             I'm&nbsp;
                             <span className="text-[#7D8C3B]">Solange~D~Ihirwe,&nbsp;</span>a
@@ -28,7 +28,7 @@ export const About = () => {
                             idea in mind?
                         </p>
                     </div>
-                    <div className="md:w-[40%] flex gap-4 flex-col md:text-md text-gray-200 items-start">
+                    <div className="lg:w-[40%] flex gap-4 flex-col md:text-md text-gray-200 items-start w-full text-sm lg:text-xl">
                         <div className="flex py-2 border-b border-gray-500">
                             <label htmlFor="name">Name: </label>
                             <p>&nbsp;&nbsp;Solange DUHIMBAZE Ihirwe</p>
@@ -36,7 +36,7 @@ export const About = () => {
                         <div className="flex py-2 border-b border-gray-500">
                             <label htmlFor="email">Email: </label>
                             <p className="text-[#7D8C3B] font-medium">
-                                &nbsp;&nbsp;solangeduhimbazeihirwe@gmail.com
+                                &nbsp;&nbsp;solangeihirwe@gmail.com
                             </p>
                         </div>
                         <div className="flex py-2 border-b border-gray-500">

@@ -11,13 +11,13 @@ export const Contact = () => {
             <div className="md:pr-44">
             <Sidebar />
             </div>
-            <div className="bg-[#212529] w-full flex items-center flex-col justify-center relative font-poppins py-6 text-white md:h-[100vh] ">
-                <div className="relative mb-5 py-7 ">
-                    <h1 className="font-bold text-7xl text-[#353535]">CONTACT</h1>
-                    <h3 className="left-24 absolute top-12 text-4xl">Get in Touch</h3>
+            <div className="bg-[#212529] w-full flex items-center flex-col justify-center relative font-poppins py-6 text-white lg:h-[100vh] ">
+                <div className="relative mb-5 py-7 w-full md:pl-32 lg:pl-64">
+                    <h1 className="font-bold md:text-7xl text-6xl text-[#353535]">CONTACT</h1>
+                    <h3 className="md:left-52 left-16 absolute top-12 md:text-4xl text-3xl lg:pl-28">Get in Touch</h3>
                 </div>
-                <div className="flex gap-6 md:w-[80vw] md:pl-32 flex-col-reverse md:flex-row-reverse">
-                    <div className="flex flex-col gap-6 md:w-[47%]">
+                <div className="flex gap-6 lg:w-[80vw] md:pl-32 flex-col-reverse lg:flex-row w-full">
+                    <div className="flex flex-col gap-6 lg:w-[47%] w-full px-3">
                         <h2>ADDRESS</h2>
                         <p className="flex items-center">
                             <FaMapLocation fontSize={20} className="text-[#7D8C3B]" />{" "}
@@ -31,7 +31,7 @@ export const Contact = () => {
                             <FaEnvelope fontSize={20} className="text-[#7D8C3B]" />{" "}
                             <span>&nbsp; solangeduhimbazeihirwe@gmail.com</span>
                         </p>
-                        <div className="pt-4">
+                        <div className="pt-4 flex flex-col items-center md:items-start">
                             <h1 className="text-xl font-semibold pb-3">FOLLOW ME</h1>
                             <div className="flex gap-2 text-gray-300 ">
                                 <FaInstagram fontSize={24} />
@@ -42,9 +42,9 @@ export const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="md:w-[47%] flex flex-col gap-5 ">
+                    <div className="lg:w-[47%] flex flex-col gap-5 w-full">
                         <h1>SEND US A CHAT</h1>
-                        <form className="w-full flex flex-col gap-5 items-center">
+                        <form className="w-full flex flex-col gap-5 items-center md:px-2">
                             <input
                                 type="text"
                                 placeholder="Name"
@@ -61,7 +61,7 @@ export const Contact = () => {
                             ></textarea>
                             <button
                                 type="submit"
-                                className="px-6 py-3 bg-[#7D8C3B] md:w-[15vw] rounded-3xl font-medium"
+                                className="px-6 py-3 bg-[#7D8C3B] lg:w-[15vw] rounded-3xl font-medium"
                             >
                                 Send Message
                             </button>
