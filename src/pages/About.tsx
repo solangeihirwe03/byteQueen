@@ -1,17 +1,13 @@
-import { Sidebar } from "../components/Sidebar"
 
 export const About = () => {
     return (
-        <div className="w-full flex">
-            <div className="md:hidden lg:pr-52">
-            <Sidebar />
-            </div>
-            <div className="bg-[#212529] flex items-center flex-col relative font-poppins w-full  text-white lg:h-[100vh] justify-center md:pl-56">
+        <div className="w-full"  id="about">
+            <div className="bg-[#212529] flex items-center flex-col relative font-poppins w-full  text-white lg:h-[100vh] justify-center">
                 <div className="relative mb-5 py-7">
-                    <h1 className="font-bold text-7xl text-[#353535]">ABOUT ME</h1>
+                    <h1 className="font-bold text-8xl text-[#353535]">ABOUT ME</h1>
                     <h3 className="left-16 absolute top-12 text-4xl">Know Me More</h3>
                 </div>
-                <div className="flex justify-between md:py-12 md:gap-16 md:w-[80%] lg:pl-4 flex-col lg:flex-row px-4 w-full">
+                <div className="flex justify-between md:py-12 md:gap-16  px-24 flex-col lg:flex-row  w-full">
                     <div className="lg:w-[55%] flex flex-col text-[15px] lg:text-lg">
                         <h2 className=" md:text-4xl text-xl font-semibold">
                             I'm&nbsp;

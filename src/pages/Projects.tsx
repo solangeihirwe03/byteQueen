@@ -1,11 +1,7 @@
-import { Sidebar } from "../components/Sidebar"
 
 export const Projects = () => {
     return (
-        <div className="w-full flex">
-            <div className="md:pr-44">
-            <Sidebar />
-            </div>
+        <div className="w-full" id="projects">
             <div className="relative bg-[#343a40] flex items-center flex-col w-full text-white">
                 <div className="relative mb-5 py-7 w-full md:pl-56 lg:pl-44">
                     <h1 className="font-bold md:text-7xl text-6xl text-[#4a4a4a]">PROJECTS</h1>

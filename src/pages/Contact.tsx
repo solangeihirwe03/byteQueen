@@ -2,22 +2,18 @@ import { FaMapLocation, FaPhone, FaEnvelope } from "react-icons/fa6";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { TbBrandPinterest } from "react-icons/tb";
 import { SlSocialTwitter } from "react-icons/sl";
-import { Sidebar } from "../components/Sidebar";
 
 
 export const Contact = () => {
     return (
-        <div className="w-full flex">
-            <div className="md:pr-44">
-            <Sidebar />
-            </div>
+        <div className="w-full flex"id="contact">
             <div className="bg-[#212529] w-full flex items-center flex-col justify-center relative font-poppins py-6 text-white lg:h-[100vh] ">
-                <div className="relative mb-5 py-7 w-full md:pl-32 lg:pl-64">
-                    <h1 className="font-bold md:text-7xl text-6xl text-[#353535]">CONTACT</h1>
-                    <h3 className="md:left-52 left-16 absolute top-12 md:text-4xl text-3xl lg:pl-28">Get in Touch</h3>
+                <div className="relative mb-5 py-7 w-full flex justify-center">
+                    <h1 className="font-bold md:text-8xl text-6xl text-[#353535]">CONTACT</h1>
+                    <h3 className="md:left-52 lg:left-[36rem] left-16 absolute top-16 md:text-4xl text-3xl lg:pl-28">Get in Touch</h3>
                 </div>
-                <div className="flex gap-6 lg:w-[80vw] md:pl-32 flex-col-reverse lg:flex-row w-full">
-                    <div className="flex flex-col gap-6 lg:w-[47%] w-full px-3">
+                <div className="flex gap-6 px-24 flex-col-reverse lg:flex-row w-full">
+                    <div className="flex flex-col gap-6 lg:w-[40%] w-full px-3 lg:text-xl">
                         <h2>ADDRESS</h2>
                         <p className="flex items-center">
                             <FaMapLocation fontSize={20} className="text-[#7D8C3B]" />{" "}
@@ -42,26 +38,26 @@ export const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="lg:w-[47%] flex flex-col gap-5 w-full">
+                    <div className="lg:w-[57%] flex flex-col gap-5 w-full">
                         <h1>SEND US A CHAT</h1>
                         <form className="w-full flex flex-col gap-5 items-center md:px-2">
                             <input
                                 type="text"
                                 placeholder="Name"
-                                className="bg-[#232a31] py-3 px-6 w-full"
+                                className="bg-[#232a31] py-4 px-6 w-full"
                             />
                             <input
                                 type="email"
                                 placeholder="Email"
-                                className="bg-[#232a31] py-3 px-6 w-full"
+                                className="bg-[#232a31] py-4 px-6 w-full"
                             />
                             <textarea
                                 placeholder="Tell us more about your needs...."
-                                className="bg-[#232a31] py-3 px-6 w-full h-24"
+                                className="bg-[#232a31] py-4 px-6 w-full h-24"
                             ></textarea>
                             <button
                                 type="submit"
-                                className="px-6 py-3 bg-[#7D8C3B] lg:w-[15vw] rounded-3xl font-medium"
+                                className="px-6 py-3 bg-[#7D8C3B] lg:w-[18vw] rounded-3xl font-medium text-xl"
                             >
                                 Send Message
                             </button>

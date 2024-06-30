@@ -1,18 +1,16 @@
 import { FC, ReactNode } from "react";
-import { Sidebar } from "../components/Sidebar";
+
 
 export const Resume = () => {
+
     return (
-        <div className="w-full flex">
-            <div className="lg:pr-64 md:pr-52">
-            <Sidebar />
-            </div>
+        <div className="w-full " id="resume">
             <div className="bg-[#212529] w-full flex items-center flex-col relative font-poppins text-white">
-                <div className="relative mb-5 pl-0 py-7 w-full px-16 md:pl-24 lg:pl-64">
+                <div className="relative mb-5 pl-0 py-7 w-full px-16 flex justify-center">
                     <h1 className="font-bold md:text-7xl text-6xl text-[#353535]">SUMMARY</h1>
-                    <h3 className="left-20 lg:left-96 md:left-64 absolute top-12 text-4xl">Resume</h3>
+                    <h3 className="left-20 lg:left-[42rem] md:left-64 absolute top-12 text-4xl">Resume</h3>
                 </div>
-                <div className="lg:w-[80vw] md:w-full lg:pl-28 md:pl-20 py-7 flex flex-col px-5">
+                <div className="lg:w-[80vw] md:w-full py-7 flex flex-col px-5">
                     <h2 className="p-4 text-2xl font-medium">My Education</h2>
                     <div className="flex flex-wrap gap-9 items-center">
                         <ResumeBox>
@@ -72,7 +70,7 @@ export const Resume = () => {
                         </ResumeBox>
                     </div>
                 </div>
-                <div className="flex flex-col lg:w-[80vw] md:w-full lg:pl-32 md:pl-16 px-4">
+                <div className="flex flex-col lg:w-[80vw] md:w-full md:pl-16 px-4">
                     <h2 className="text-2xl font-medium">My Skills</h2>
                     <div className="w-full flex flex-wrap gap-9 py-4 ">
                         <div className="lg:w-[47%] w-full ">
@@ -145,5 +143,5 @@ interface SidebarProps {
 }
 
 const ResumeBox: FC<SidebarProps> = ({ children }) => {
-    return <div className="lg:w-[47%] flex flex-col justify-center p-7 gap-3 bg-black rounded-3xl md:w-full">{children}</div>
+    return <div className="lg:w-[48%] flex flex-col justify-center p-7 gap-3 bg-black rounded-3xl w-full h-[45vh]">{children}</div>
 }

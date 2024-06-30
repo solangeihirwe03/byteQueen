@@ -9,6 +9,15 @@ export default {
       backgroundImage: {
         "myBackground": `url('./background.jpg')`, // Replace with your image name
       },
+      transitionTransform: {
+        "transitionProperty": "transform"
+      },
+      transform: {
+        "transform": "translate(0, 0)"
+      },
+      translateYFull: {
+        "transform": "translateY(-100%)"
+      }
     },
   },
   plugins: [],
