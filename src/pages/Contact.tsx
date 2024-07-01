@@ -4,6 +4,8 @@ import { TbBrandPinterest } from "react-icons/tb";
 import { SlSocialTwitter } from "react-icons/sl";
 import { Response } from "../components/Response";
 import { useState } from "react";
+import axios from "axios";
+import { ChangeEvent } from "react";
 
 
 export const Contact = () => {
@@ -11,6 +13,11 @@ export const Contact = () => {
     const [message, setMessage] = useState({ type: "", content: "" })
 
     const validEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+    const handleinputs = (e: ChangeEvent<HTMLInputElement>) => {
+        setContact(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    }
+
     const handlesubmit = () => {
         if (!contact.email || !contact.name || !contact.message) {
             setMessage({
@@ -24,6 +31,23 @@ export const Contact = () => {
             setMessage({ type: "error", content: "provide valid email" });
             return;
         }
+       axios.post("https://backend-mybrand-solange.onrender.com/messages/createMessage", contact)
+       .then(response=>{
+        console.log(response.data)
+        setMessage({
+            type: "success",
+            content: response.data
+        })
+
+        setContact({name: "", email: "", message: ""})
+       }) 
+       .catch(err=>{
+        console.log(err)
+        setMessage({
+            type: "error",
+            content: "Error adding contact"
+        })
+       })
     }
     return (
         <div className="w-full flex" id="contact">
@@ -75,12 +99,14 @@ export const Contact = () => {
                                 type="text"
                                 placeholder="Name"
                                 value={contact.name}
+                                onChange={handleinputs}
                                 className="bg-[#232a31] py-4 px-6 w-full"
                             />
                             <input
                                 type="email"
                                 placeholder="Email"
                                 value={contact.email}
+                                onChange={handleinputs}
                                 className="bg-[#232a31] py-4 px-6 w-full"
                             />
                             <textarea
