@@ -7,7 +7,7 @@ export default {
         poppins: [ "Poppins", 'sans-serif'],
       },
       backgroundImage: {
-        "myBackground": `url('./background.jpg')`, // Replace with your image name
+        "myBackground": `url("/background.jpg")`, // Replace with your image name
       },
       transitionTransform: {
         "transitionProperty": "transform"
