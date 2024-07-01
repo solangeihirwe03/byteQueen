@@ -9,23 +9,28 @@ export const Projects = () => {
                 </div>
                 <div className="lg:w-[80vw] md:pl-32 flex flex-wrap gap-7 px-4">
                     <div className="lg:w-[30%] mb-20 border rounded-b-3xl w-full">
-                        <img
-                            src="myBrand.jpg"
-                            alt="my-brand portfolio"
-                            className="w-full lg:h-[40vh] brightness-60"
-                        />
-                        <h2 className="p-4">Design</h2>
-                        <h3 className="px-4 pb-2">My brand Website</h3>
+                        <a href="https://my-brand-4c6d.onrender.com/" target="_blank" >
+                            <img
+                                src="myBrand.jpg"
+                                alt="my-brand portfolio"
+                                className="w-full lg:h-[40vh] brightness-60"
+                            />
+                            <h2 className="p-4">Design</h2>
+                            <h3 className="px-4 pb-2">My brand Website</h3>
+                        </a>
                     </div>
 
+
                     <div className="lg:w-[30%] mb-20 border rounded-b-3xl w-full">
-                        <img
-                            src="TailwindPort.jpg"
-                            alt="my-brand portfolio"
-                            className="w-full lg:h-[40vh] brightness-60"
-                        />
-                        <h2 className="p-4">Design</h2>
-                        <h3 className="px-4 pb-2">Tailwind project</h3>
+                        <a href="https://my-portfolio2-76bw.onrender.com/" target="_blank">
+                            <img
+                                src="TailwindPort.jpg"
+                                alt="my-brand portfolio"
+                                className="w-full lg:h-[40vh] brightness-60"
+                            />
+                            <h2 className="p-4">Design</h2>
+                            <h3 className="px-4 pb-2">Tailwind project</h3>
+                        </a>
                     </div>
 
                     <div className="lg:w-[30%] mb-20 border rounded-b-3xl w-full">

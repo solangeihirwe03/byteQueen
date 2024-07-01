@@ -1,12 +1,32 @@
 import { FaMapLocation, FaPhone, FaEnvelope } from "react-icons/fa6";
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { TbBrandPinterest } from "react-icons/tb";
 import { SlSocialTwitter } from "react-icons/sl";
+import { Response } from "../components/Response";
+import { useState } from "react";
 
 
 export const Contact = () => {
+    const [contact, setContact] = useState({ name: "", email: "", message: "" })
+    const [message, setMessage] = useState({ type: "", content: "" })
+
+    const validEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    const handlesubmit = () => {
+        if (!contact.email || !contact.name || !contact.message) {
+            setMessage({
+                type: "error",
+                content: "please fill information in field"
+            });
+            return;
+        }
+
+        if (!validEmail.test(contact.email)) {
+            setMessage({ type: "error", content: "provide valid email" });
+            return;
+        }
+    }
     return (
-        <div className="w-full flex"id="contact">
+        <div className="w-full flex" id="contact">
             <div className="bg-[#212529] w-full flex items-center flex-col justify-center relative font-poppins py-6 text-white lg:h-[100vh] ">
                 <div className="relative mb-5 py-7 w-full flex justify-center">
                     <h1 className="font-bold md:text-8xl text-6xl text-[#353535]">CONTACT</h1>
@@ -30,11 +50,21 @@ export const Contact = () => {
                         <div className="pt-4 flex flex-col items-center md:items-start">
                             <h1 className="text-xl font-semibold pb-3">FOLLOW ME</h1>
                             <div className="flex gap-2 text-gray-300 ">
-                                <FaInstagram fontSize={24} />
-                                <FaFacebookF fontSize={24} />
-                                <SlSocialTwitter fontSize={24} />
-                                <TbBrandPinterest fontSize={24} />
-                                <FaLinkedinIn fontSize={24} />
+                                <a href="https://www.instagram.com/__ihirwe___14/" target="_blank">
+                                    <FaInstagram fontSize={24} />
+                                </a>
+                                <a href="https://github.com/solangeihirwe03" about="_blank">
+                                    <FaGithub fontSize={24} />
+                                </a>
+                                <a href="https://x.com/IhirweSolange" target="_blank">
+                                    <SlSocialTwitter fontSize={24} />
+                                </a>
+                                <a href="https://www.pinterest.com/ihirwesolange/" target="_blank">
+                                    <TbBrandPinterest fontSize={24} />
+                                </a>
+                                <a href="https://www.linkedin.com/in/solangeihirwe/" target="_blank">
+                                    <FaLinkedinIn fontSize={24} />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -44,18 +74,22 @@ export const Contact = () => {
                             <input
                                 type="text"
                                 placeholder="Name"
+                                value={contact.name}
                                 className="bg-[#232a31] py-4 px-6 w-full"
                             />
                             <input
                                 type="email"
                                 placeholder="Email"
+                                value={contact.email}
                                 className="bg-[#232a31] py-4 px-6 w-full"
                             />
                             <textarea
                                 placeholder="Tell us more about your needs...."
+                                value={contact.message}
                                 className="bg-[#232a31] py-4 px-6 w-full h-24"
                             ></textarea>
                             <button
+                                onSubmit={handlesubmit}
                                 type="submit"
                                 className="px-6 py-3 bg-[#7D8C3B] lg:w-[18vw] rounded-3xl font-medium text-xl"
                             >
@@ -63,6 +97,7 @@ export const Contact = () => {
                             </button>
                         </form>
                     </div>
+                    <Response type={message.type} content={message.content} />
                 </div>
             </div>
         </div>
