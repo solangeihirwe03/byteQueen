@@ -45,12 +45,15 @@ export const Projects = () => {
 
                     <div className="lg:w-[30%] mb-20 border rounded-b-3xl w-full">
                         <img
-                            src="RandomEmoji.jpg"
+                            src="weatherApp.jpeg"
                             alt="my-brand portfolio"
                             className="w-full lg:h-[40vh] brightness-60"
                         />
-                        <h2 className="p-4">Game</h2>
-                        <h3 className="px-4 pb-2">Generate Random Emoji</h3>
+                        <h2 className="p-4">Weather App</h2>
+                        <h3 className="px-4 pb-2">
+                            Weather Watch built with React.js and TypeScript that
+                            provides weather forecasts and related information
+                        </h3>
                     </div>
 
                     <div className="lg:w-[30%] mb-20 border rounded-b-3xl w-full">
