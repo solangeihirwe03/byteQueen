@@ -55,7 +55,7 @@ interface SidebarProps {
 }
 const BoxWrapper: FC<SidebarProps> = ({ children }) => {
     return (
-        <div className="flex gap-3 flex-col items-center lg:w-1/3 justify-center border p-7 rounded-3xl flex-wrap lg:h-[42vh] lg:text-lg">
+        <div className="flex gap-3  items-center lg:w-1/3 justify-center border p-7 rounded-3xl flex-wrap lg:h-[42vh] lg:text-[18px]">
             {children}
         </div>
     );
