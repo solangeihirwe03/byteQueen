@@ -1,9 +1,7 @@
-import { useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useState, useEffect } from "react"
 import { FaInstagram, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { TbBrandPinterest } from 'react-icons/tb';
 import { SlSocialTwitter } from "react-icons/sl";
-import { RiMenu2Line, RiMenu3Fill } from "react-icons/ri";
 
 export const SocialMdIcn = () => {
     return (
@@ -28,50 +26,56 @@ export const SocialMdIcn = () => {
 }
 
 export const Header = () => {
-    const { pathname } = useLocation()
-    let subpage = pathname.split("/")?.[1]
     const [isOpen, setIsOpen] = useState(true)
+    const [isScrolled, setIsScrolled] = useState(false)
 
-    const toogleMenu = () => {
-        setIsOpen(!isOpen)
+    const handleScroll = ()=>{
+      const offSet = window.scrollY
+  
+      if(offSet > 400){
+        setIsScrolled(true)
+      }else{
+        setIsScrolled(false)
+      }
     }
+  
+    useEffect(()=>{
+      window.addEventListener("scroll", handleScroll)
+  
+      return ()=>{
+        window.removeEventListener("scroll", handleScroll)
+      }
+    }, [])
+
 
     const handleLinkClick = () => {
         setIsOpen(false);
     };
     return (
-        <div className="fixed drop-shadow-lg text-white font-medium top-0 left-0 w-full text-grey-500  flex justify-between md:items-center z-40 text-xl bg-black">
-            <h1 className="py-3 px-2">Solange</h1>
+        <div className={`fixed drop-shadow-lg text-white font-medium top-0 left-0 w-full text-grey-500  flex justify-between md:items-center z-40 text-xl px-8 ${isScrolled ? "bg-black" : "bg-none"}`}>
+            <h1 className="py-3 px-2 text-3xl">I<span className="text-[#F4A169]">~</span>Solange</h1>
             <div>
                 <ul className={`flex flex-col md:flex-row gap-6 items-center text-white md:text-2xl transition duration-400 justify-center py-5 w-full ${isOpen ? "block" : "hidden"}`}
                     onClick={handleLinkClick}>
-                    <li className={`hover:text-[#7D8C3B] ${subpage === "" ? "" : "text-white"}`}>
+                    <li className={`hover:text-[#F4A169]`}>
                         <a href="/#home">Home</a>
                     </li>
-                    <li className={`hover:text-[#7D8C3B] ${subpage === "#about" ? "text-[#7D8C3B]" : "text-white"}`}>
+                    <li className={`hover:text-[#F4A169]`}>
                         <a href="/#about" >About Me</a>
                     </li>
-                    <li className={`hover:text-[#7D8C3B] ${subpage === "#services" ? "text-[#7D8C3B]" : "text-white"}`}>
+                    <li className={`hover:text-[#F4A169] `}>
                         <a href="/#services">Services</a>
                     </li>
-                    <li className={`hover:text-[#7D8C3B] ${subpage === "resume" ? "text-[#7D8C3B]" : "text-white"}`}>
+                    <li className={`hover:text-[#F4A169] `}>
                         <a href="/#resume">Resume</a>
                     </li>
-                    <li className={`hover:text-[#7D8C3B] ${subpage === "projects" ? "text-[#7D8C3B]" : "text-white"}`}>
+                    <li className={`hover:text-[#F4A169] `}>
                         <a href="/#projects">Projects</a>
                     </li>
-                    <li className={`hover:text-[#7D8C3B] ${subpage === "contact" ? "text-[#7D8C3B]" : "text-white"}`}>
+                    <li className={`hover:text-[#F4A169]`}>
                         <a href="/#contact">Contacts</a>
                     </li>
                 </ul>
-            </div>
-            <div >
-                <button onClick={toogleMenu} className="focus:outline-none md:hidden px-6 py-3">
-                    {isOpen ? <RiMenu2Line /> : <RiMenu3Fill />}
-                </button>
-            </div>
-            <div className="hidden md:flex">
-                <SocialMdIcn />
             </div>
         </div>
     )
