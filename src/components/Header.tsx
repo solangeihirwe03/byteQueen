@@ -32,7 +32,7 @@ export const Header = () => {
     const handleScroll = ()=>{
       const offSet = window.scrollY
   
-      if(offSet > 400){
+      if(offSet > 300){
         setIsScrolled(true)
       }else{
         setIsScrolled(false)
