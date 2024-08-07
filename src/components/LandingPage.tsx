@@ -1,22 +1,5 @@
-// import { useEffect, useState } from "react";
-// import Typed from "typed.js";
 
 const LandingPage = () => {
- 
-  // useEffect(() => {
-  //   const typing = new Typed("#home__title", {
-  //     cursorChar: "",
-  //     strings: [
-  //       "I'm Solange~D~Ihirwe",
-  //       "I'm a Freelancer"
-  //     ],
-  //     typeSpeed: 150,
-  //     backSpeed: 80,
-  //     loop: true
-  //   });
-
-  //   return () => typing.destroy();
-  // }, []);
 
   return (
     <div className={`bg-myBackground w-full bg-center bg-cover h-[150vh] bg-no-repeat pt-56 px-10 `}>

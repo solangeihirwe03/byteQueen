@@ -2,13 +2,13 @@
 export const Projects = () => {
     return (
         <div className="w-full" id="projects">
-            <div className="relative bg-[#343a40] flex items-center flex-col w-full text-white">
+            <div className="relative bg-[#131313] flex items-center flex-col w-full text-white">
                 <div className="relative mb-5 py-7 w-full md:pl-56 lg:pl-44">
                     <h1 className="font-bold md:text-7xl text-6xl text-[#4a4a4a]">PROJECTS</h1>
                     <h3 className="left-24 absolute top-12 text-4xl md:left-72">My Work</h3>
                 </div>
                 <div className="lg:w-[80vw] md:pl-32 flex flex-wrap gap-7 px-4">
-                    <div className="lg:w-[30%] mb-20 border rounded-b-3xl w-full">
+                    <div className="lg:w-[30%] mb-20 rounded-b-3xl w-full shadow-2xl bg-black">
                         <a href="https://my-brand-4c6d.onrender.com/" target="_blank" >
                             <img
                                 src="myBrand.jpg"

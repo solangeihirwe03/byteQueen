@@ -5,7 +5,7 @@ export const Resume = () => {
 
     return (
         <div className="w-full " id="resume">
-            <div className="bg-[#212529] w-full flex items-center flex-col relative font-poppins text-white">
+            <div className="bg-[#212529] w-full flex items-center flex-col relative font-poppins text-white h-auto">
                 <div className="relative mb-5 pl-0 py-7 w-full px-16 flex justify-center">
                     <h1 className="font-bold md:text-7xl text-6xl text-[#353535]">SUMMARY</h1>
                     <h3 className="left-20 lg:left-[42rem] md:left-64 absolute top-12 text-4xl">Resume</h3>
