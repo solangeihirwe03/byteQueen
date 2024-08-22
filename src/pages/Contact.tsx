@@ -60,15 +60,15 @@ export const Contact = () => {
                     <div className="flex flex-col gap-6 lg:w-[40%] w-full px-3 lg:text-xl">
                         <h2>ADDRESS</h2>
                         <p className="flex items-center">
-                            <FaMapLocation fontSize={20} className="text-[#7D8C3B]" />{" "}
+                            <FaMapLocation fontSize={20} className="text-[#F4A169]" />{" "}
                             <span>&nbsp; Kigali/Rwanda</span>
                         </p>
                         <p className="flex items-center">
-                            <FaPhone fontSize={20} className="text-[#7D8C3B]" />{" "}
+                            <FaPhone fontSize={20} className="text-[#F4A169]" />{" "}
                             <span>&nbsp; +2507113254</span>
                         </p>
                         <p className="flex items-center">
-                            <FaEnvelope fontSize={20} className="text-[#7D8C3B]" />{" "}
+                            <FaEnvelope fontSize={20} className="text-[#F4A169]" />{" "}
                             <span>&nbsp; solangeduhimbazeihirwe@gmail.com</span>
                         </p>
                         <div className="pt-4 flex flex-col items-center md:items-start">
@@ -117,7 +117,7 @@ export const Contact = () => {
                             <button
                                 onSubmit={handlesubmit}
                                 type="submit"
-                                className="px-6 py-3 bg-[#7D8C3B] lg:w-[18vw] rounded-3xl font-medium text-xl"
+                                className="px-6 py-3 bg-[#F4A169] lg:w-[18vw] rounded-3xl font-medium text-xl"
                             >
                                 Send Message
                             </button>

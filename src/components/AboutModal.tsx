@@ -51,7 +51,7 @@ const AboutModal:React.FC<AboutProps>= ({confirm}) => {
                     </p>
                     <p className="text-[#F4A169] flex gap-2 items-end border-[#afafaf] border-b-2 border-dashed py-2 mb-72 w-full ">
                         <CgMail fontSize={30} />
-                        <span className="text-white">solangeduhimbazeihirwe@gmail</span>
+                        <span className="text-white">solangeduhimbazeihirwe@gmail.com</span>
                     </p>
                 </div>
             </div>
@@ -64,7 +64,7 @@ const AboutModal:React.FC<AboutProps>= ({confirm}) => {
                         </span>
                     </h1>
                     <p className="text-md leading-relaxed pb-6 font-light">
-                        Hello everybody! My name is Solange Duhimbaze Ihirwe. I am a graphic designer,
+                        Hello everybody! My name is Solange Duhimbaze Ihirwe. I am a Full Stack Developer,
                         and I'm very passionate and dedicated to my work
                         by create engaging and strengthen a company's brand image.
                         Do you have an interactive idea in mind?
@@ -189,7 +189,7 @@ const AboutModal:React.FC<AboutProps>= ({confirm}) => {
 
                         <div className="absolute left-[-13px] top-40 w-6 h-6 rounded-full bg-[#F4A169]"></div>
                         <div className="p-8 ml-16 flex gap-40 items-center">
-                            <p className="px-4 py-2 rounded-full bg-[#1E1E1E] w-40 text-center h-10">2022-present</p>
+                            <p className="px-4 py-2 rounded-full bg-[#1E1E1E] w-40 text-center h-10">2018-2021</p>
                             <div>
                                 <h1>G.S.St Aloys Rwamagana</h1>
                                 <p className="text-sm font-extralight">Advanced Diploma</p>
